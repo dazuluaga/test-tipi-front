@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Ping Pong</span>
+            <div class="pingP">
+                <input #identificador class="form-control mt-3" type="number" placeholder="Ingrese un numero" />
+                <button type="button" class="btn btn-warning mt-3" id="btnGuardar" (click)="pingPongCount(identificador.value)">
+          Generar
+        </button>
+            </div>
+            <button class="btn btn-success btn-lg float-right mt-5" id="btnGuardar" routerLink="/list-person">
+        Listado Personas
+      </button>
+        </div>
+        <div class="row">
+            <div id="count" class="col-12">
+                <h1>Resultado</h1>
+                <h3 *ngFor="let dato of datos; let i = index">{{ dato }}</h3>
+            </div>
+        </div>
+    </div>
+</div>

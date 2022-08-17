@@ -1,0 +1,41 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado Personas</span>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Eliminar</th>
+                        <!-- <th>Tipo Documento</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let persona of personas; let i = index">
+                        <td>{{ persona.id }}</td>
+                        <td>{{ persona.name }}</td>
+                        <td>{{ persona.lastName }}</td>
+                        <td>{{ persona.age }}</td>
+                        <td>
+                            <!-- <button class="btn btn-outline-light float-right" (click)="eliminarPerson(persona, i)" routerLink="/list-person">
+                <i class="fa-solid fa-pen-to-square fa-lg text-info"></i>
+              </button> -->
+                            <button class="btn btn-outline-light float-right" (click)="eliminarPerson(persona, i)" routerLink="/list-person">
+                <i class="fa-solid fa-trash-can fa-lg text-danger"></i>
+              </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-success btn-lg mt-5" id="btnCrear" routerLink="/create-person">
+        Agregar Persona
+      </button>
+            <button class="btn btn-warning btn-lg mt-5" id="btnPingPong" routerLink="/ping-pong">
+        PingPong
+      </button>
+        </div>
+    </div>
+</div>
